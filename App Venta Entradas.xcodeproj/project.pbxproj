@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0D681721AEADDA005EC3AB /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D681621AEADDA005EC3AB /* BuyViewController.swift */; };
+		7F63AEFA21AC290C00ACFE9F /* CompraDeEntradasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F63AEF921AC290C00ACFE9F /* CompraDeEntradasCell.swift */; };
 		7F6E682B21A80FCD00F8D884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6E682A21A80FCD00F8D884 /* AppDelegate.swift */; };
 		7F6E682D21A80FCD00F8D884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6E682C21A80FCD00F8D884 /* ViewController.swift */; };
 		7F6E683021A80FCD00F8D884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6E682E21A80FCD00F8D884 /* Main.storyboard */; };
 		7F6E683221A80FCE00F8D884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6E683121A80FCE00F8D884 /* Assets.xcassets */; };
 		7F6E683521A80FCE00F8D884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6E683321A80FCE00F8D884 /* LaunchScreen.storyboard */; };
+		7F90003521B6A990009F4E9B /* OwnTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F90003421B6A990009F4E9B /* OwnTicketsViewController.swift */; };
+		7FAF059B21B56905007F13E3 /* EntradasCompradasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF059A21B56905007F13E3 /* EntradasCompradasTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F0D681621AEADDA005EC3AB /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		7F63AEF921AC290C00ACFE9F /* CompraDeEntradasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraDeEntradasCell.swift; sourceTree = "<group>"; };
 		7F6E682721A80FCD00F8D884 /* App Venta Entradas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Venta Entradas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6E682A21A80FCD00F8D884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F6E682C21A80FCD00F8D884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,8 @@
 		7F6E683121A80FCE00F8D884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F6E683421A80FCE00F8D884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F6E683621A80FCE00F8D884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F90003421B6A990009F4E9B /* OwnTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnTicketsViewController.swift; sourceTree = "<group>"; };
+		7FAF059A21B56905007F13E3 /* EntradasCompradasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntradasCompradasTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,34 @@
 		7F6E682921A80FCD00F8D884 /* App Venta Entradas */ = {
 			isa = PBXGroup;
 			children = (
+				7F90003821B6AE21009F4E9B /* TableViewController */,
+				7F90003721B6AE0E009F4E9B /* Celdas */,
 				7F6E682A21A80FCD00F8D884 /* AppDelegate.swift */,
 				7F6E682C21A80FCD00F8D884 /* ViewController.swift */,
-				7F6E682E21A80FCD00F8D884 /* Main.storyboard */,
 				7F6E683121A80FCE00F8D884 /* Assets.xcassets */,
+				7F6E682E21A80FCD00F8D884 /* Main.storyboard */,
 				7F6E683321A80FCE00F8D884 /* LaunchScreen.storyboard */,
 				7F6E683621A80FCE00F8D884 /* Info.plist */,
 			);
 			path = "App Venta Entradas";
+			sourceTree = "<group>";
+		};
+		7F90003721B6AE0E009F4E9B /* Celdas */ = {
+			isa = PBXGroup;
+			children = (
+				7F63AEF921AC290C00ACFE9F /* CompraDeEntradasCell.swift */,
+				7FAF059A21B56905007F13E3 /* EntradasCompradasTableViewCell.swift */,
+			);
+			path = Celdas;
+			sourceTree = "<group>";
+		};
+		7F90003821B6AE21009F4E9B /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7F90003421B6A990009F4E9B /* OwnTicketsViewController.swift */,
+				7F0D681621AEADDA005EC3AB /* BuyViewController.swift */,
+			);
+			path = TableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F63AEFA21AC290C00ACFE9F /* CompraDeEntradasCell.swift in Sources */,
+				7F0D681721AEADDA005EC3AB /* BuyViewController.swift in Sources */,
 				7F6E682D21A80FCD00F8D884 /* ViewController.swift in Sources */,
+				7FAF059B21B56905007F13E3 /* EntradasCompradasTableViewCell.swift in Sources */,
 				7F6E682B21A80FCD00F8D884 /* AppDelegate.swift in Sources */,
+				7F90003521B6A990009F4E9B /* OwnTicketsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
