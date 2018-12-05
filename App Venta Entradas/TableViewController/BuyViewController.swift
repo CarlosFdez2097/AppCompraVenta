@@ -19,10 +19,12 @@ class BuyViewController: UIViewController , UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 150;
-        
     }
-    
-
+    override func viewDidAppear(_ animated: Bool)
+    {
+        self.position = 0
+        tableView.reloadData()
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return nameEvents.count
@@ -32,7 +34,6 @@ class BuyViewController: UIViewController , UITableViewDataSource, UITableViewDe
     {
         let celda = tableView.dequeueReusableCell(withIdentifier: "EventosCelda", for: indexPath) as! CompraDeEntradasCell
         
-
         celda.EventTitle.text = nameEvents[self.position]
         celda.EventUbication.text = UbicationEvents[self.position]
         celda.EventMoney.text = MoneyEvents[self.position]
@@ -50,14 +51,17 @@ class BuyViewController: UIViewController , UITableViewDataSource, UITableViewDe
     {
         let buttonPress = sender as! UIButton
         
-
-        var celda = tableView.cellForRow(at: IndexPath.init(row: buttonPress.tag, section: 0)) as! CompraDeEntradasCell
+        let celda = tableView.cellForRow(at: IndexPath.init(row: buttonPress.tag, section: 0)) as! CompraDeEntradasCell
         
-        var destino  = segue.destination as! OwnTicketsViewController
+        let destino  = segue.destination as! OwnTicketsViewController
         
-        destino.nameEvents.append(celda.EventTitle)
-        
-        }
+        destino.cargar()
+        destino.nameEvents.append(celda.EventTitle.text!)
+        destino.ImageEvents.append(ImageEvents[buttonPress.tag])
+        destino.NumTicketsEvents.append(String(celda.EventSlider.value))
+        destino.UbicationEvents.append(celda.EventUbication.text!)
+        destino.guardar()
     }
+}
         
 

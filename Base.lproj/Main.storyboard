@@ -23,14 +23,14 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="117" id="Ps0-F5-RcY" customClass="EntradasCompradasTableViewCell" customModule="App_Venta_Entradas" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="117" id="Ps0-F5-RcY" customClass="EntradasCompradasTableViewCell" customModule="App_Venta_Entradas" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ps0-F5-RcY" id="TmB-pV-W42">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="116.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GUQ-a3-ulh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GUQ-a3-ulh" userLabel="Event Image">
                                                     <rect key="frame" x="0.0" y="0.0" width="131" height="117"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="117" id="CD1-6l-XrK"/>
@@ -163,7 +163,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventosCelda" rowHeight="150" id="mGK-ke-MXt" customClass="CompraDeEntradasCell" customModule="App_Venta_Entradas" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventosCelda" rowHeight="150" id="mGK-ke-MXt" customClass="CompraDeEntradasCell" customModule="App_Venta_Entradas" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mGK-ke-MXt" id="q2S-4q-Kwp">
@@ -178,7 +178,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBB-0f-Btv">
-                                                    <rect key="frame" x="234" y="57.666666666666657" width="79" height="21"/>
+                                                    <rect key="frame" x="289" y="57.666666666666657" width="79" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="TP3-JD-iCT"/>
                                                         <constraint firstAttribute="width" constant="79" id="wZf-Sj-QA5"/>
@@ -188,7 +188,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo del evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CM-Dt-66V">
-                                                    <rect key="frame" x="118" y="0.0" width="202" height="21"/>
+                                                    <rect key="frame" x="173" y="0.0" width="202" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="202" id="2vd-me-rzA"/>
                                                         <constraint firstAttribute="height" constant="21" id="6pE-Ex-Rhh"/>
@@ -218,7 +218,7 @@
                                                     </connections>
                                                 </slider>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpq-ow-RsZ">
-                                                    <rect key="frame" x="251" y="115.66666666666667" width="62" height="24.000000000000014"/>
+                                                    <rect key="frame" x="306" y="115.66666666666667" width="62" height="24.000000000000014"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="4km-Yt-lEu"/>
                                                         <constraint firstAttribute="width" constant="62" id="cDT-mK-JqA"/>
@@ -229,7 +229,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psn-OR-hfY">
-                                                    <rect key="frame" x="234" y="77.666666666666671" width="79" height="21"/>
+                                                    <rect key="frame" x="289" y="77.666666666666671" width="79" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="79" id="JA7-Lg-HDL"/>
                                                         <constraint firstAttribute="height" constant="21" id="qCD-O9-4dl"/>
@@ -281,9 +281,6 @@
                         <viewLayoutGuide key="safeArea" id="SSO-Dj-LS3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="paX-Ia-O1D"/>
-                    <connections>
-                        <outlet property="tableView" destination="dUf-Wf-3E6" id="ocr-FR-V7b"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIc-6N-bUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

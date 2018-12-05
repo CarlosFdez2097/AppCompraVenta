@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CompraDeEntradasCell: UITableViewCell {
-
+class CompraDeEntradasCell: UITableViewCell
+{
     @IBOutlet weak var EventImage: UIImageView!
     @IBOutlet weak var EventTitle: UILabel!
     @IBOutlet weak var EventSlider: UISlider!
@@ -28,5 +28,4 @@ class CompraDeEntradasCell: UITableViewCell {
         
         EventMoney.text =  String(priceTickets)
     }
-
 }
