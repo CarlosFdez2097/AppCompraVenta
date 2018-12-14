@@ -22,10 +22,10 @@ class CompraDeEntradasCell: UITableViewCell
     
     @IBAction func Slider(_ sender: UISlider)
     {
-        EventNumTickets.text = String(Int(EventSlider.value))
+        EventNumTickets.text = String(Int(EventSlider.value)) + " " + "Tickets"
         
         var priceTickets: Int = price * Int(EventSlider.value)
         
-        EventMoney.text =  String(priceTickets)
+        EventMoney.text =  String(priceTickets) + " " + "$"
     }
 }

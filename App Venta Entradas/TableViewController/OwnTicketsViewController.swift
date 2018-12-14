@@ -17,6 +17,7 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
     var NumTicketsEvents:[String] = []
     var UbicationEvents:[String] = []
     var ImageEvents:[String] = []
+    var CodigosEvents:[String] = []
     var position:Int = Int()
     
     
@@ -27,7 +28,9 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
         tableview.dataSource = self
         tableview.delegate = self
         tableview.rowHeight = 125
-        self.guardar()
+        //self.guardar()
+        self.cargar()
+        
     }
     override func viewDidAppear(_ animated: Bool)
     {
@@ -45,15 +48,17 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
     {
         let celda = tableView.dequeueReusableCell(withIdentifier: "EventosCompradasCelda", for: indexPath) as! EntradasCompradasTableViewCell
         
-        celda.EventTitle.text = nameEvents[self.position]
-        celda.EventsUbications.text = UbicationEvents[self.position]
-        celda.EventImage.image = UIImage(named: ImageEvents[self.position])
-        celda.EventNumTickets.text = NumTicketsEvents[self.position]
-        celda.Eventbtn.tag = indexPath.row
-        
-        self.position += 1
-        
-        return celda
+        if(self.position < nameEvents.count)
+        {
+            celda.EventTitle.text = nameEvents[self.position]
+            celda.EventsUbications.text = UbicationEvents[self.position]
+            celda.EventImage.image = UIImage(named: ImageEvents[self.position])
+            celda.EventNumTickets.text = NumTicketsEvents[self.position] + " " + "Tickets"
+            celda.Eventbtn.tag = indexPath.row
+            
+            self.position += 1
+        }
+      return celda
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -66,7 +71,9 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
         
         destino.NameEvent = nameEvents[buttonPress.tag]
         destino.ImageEvent = ImageEvents[buttonPress.tag]
-        destino.CodeEvent = "5"
+        destino.TicketsEvent = NumTicketsEvents[buttonPress.tag]
+        destino.UbicationEvent = UbicationEvents[buttonPress.tag]
+        destino.CodeEvent = CodigosEvents[buttonPress.tag]
         
     }
     
@@ -78,6 +85,7 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
         EventsData.set(self.NumTicketsEvents, forKey: "NumTicketsEvents")
         EventsData.set(self.ImageEvents, forKey: "ImageEvents")
         EventsData.set(self.UbicationEvents, forKey: "UbicationEvents")
+        EventsData.set(self.CodigosEvents, forKey: "CodigosEvents")
         
         
     }
@@ -91,6 +99,7 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
             self.NumTicketsEvents = EventsData.object(forKey: "NumTicketsEvents") as! [String]
             self.ImageEvents = EventsData.object(forKey: "ImageEvents") as! [String]
             self.UbicationEvents = EventsData.object(forKey: "UbicationEvents") as! [String]
+            self.CodigosEvents = EventsData.object(forKey: "CodigosEvents") as! [String]
         }
     }
 }
