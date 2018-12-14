@@ -27,7 +27,7 @@ class DetalleViewController: UIViewController
     {
         super.viewDidLoad()
         
-        let image = generateQRCode(from: Guillermito)
+        let image = generateQRCode(from: CodeEvent)
         
         QRImage.image = image
         EventImage.image = UIImage(named: ImageEvent)
@@ -42,11 +42,7 @@ class DetalleViewController: UIViewController
         }
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
-    
+    /* Lanza un alert com un mensaje predefinido */
     func alert()
     {
         let alert = UIAlertController(title: "Compra Realizada", message:
@@ -58,6 +54,7 @@ class DetalleViewController: UIViewController
         present(alert, animated: true, completion: nil)
     }
     
+    /* Genera un codigo QR con el string que se le pasa*/
     func generateQRCode(from string: String) -> UIImage?
     {
         let data = string.data(using: String.Encoding.ascii)
@@ -65,7 +62,7 @@ class DetalleViewController: UIViewController
         if let filter = CIFilter(name: "CIQRCodeGenerator")
         {
             filter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 20, y: 20)
+            let transform = CGAffineTransform(scaleX: 3, y: 3)
             
             if let output = filter.outputImage?.transformed(by: transform)
             {
@@ -78,6 +75,7 @@ class DetalleViewController: UIViewController
     
     
     /* Una  variable que es para el qr no esta en uso */
+    
     var Guillermito:String = "????????,,::,::,,:~I?7I777IIII?:~=~:,:~,\n???????,,,,,:,:,,,,,:II7I77?::=+~~~:+~,,\n??????,:,,:+?~:.,=.+,:=:::::=~::::~,~,:,\n??????+~:~????=~::==+~~:::::==~::?7I+I7~\n?????~?+~?=:~?+=:++~=+++??+~~~~::=7?+?I~\n????+??:??++~::=~::?+=:::,,,,,,,,,,,,:=?\n++++??::++?+??+,::,:?==~~,:?+::,,,,,,,,,\n::????=,:=,~~?~:I77=?+~::,,::???+:~+???I\n,,=+?+=,=++~:,:7777,=+==:,,::+I?+::::,:,\n,,::===~,~~::,7III7,:++~,,:::+??~,:~:,::\n,,,,,~=~:.:,.,:?III,:?+~.::~:???::,,,:,:\n,,:,,,,.,....,,:7I?,~??~,,::~+??:,,,,:,,\n,,,,,,,,...,,,,,,7?~,??~::=:?+??+??,,::.\n,,,,:::,..,,.,,,,,~:~?+~~,,,::::,,,,,,,,\n,,,,,,,,,.,,.=++++~=+?=~~::....,,,,,::::\n.,,,,,,,,,,.:==~?+=~??=,,.........,,:::~\n..,,,,,,,,.,,.~,=+++?+=........,:...,,::\n.....,,..,,.===~+??=?+,...............::\n.........,~~==~::=?+++.................?\n,,.......~.::::,,,,++:.................=\n.,,.....~:..:::??~=,,.................:.\n?++=++==+???????I?+~~...................\n+++=++?+??????+~+?=+....................\n~~~~:::~~::,,.,+??,+.................,,,\n,,.~:..,,.,:.:::::~.......,..........,::"
 
 
