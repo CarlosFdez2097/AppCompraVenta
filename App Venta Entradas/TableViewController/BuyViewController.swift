@@ -26,11 +26,13 @@ class BuyViewController: UIViewController , UITableViewDataSource, UITableViewDe
         DateEvents.append(crearfecha(year: 2018, month: 1, day: 22))
         DateEvents.append(crearfecha(year: 2020, month: 10, day: 25))
     }
+    
     override func viewDidAppear(_ animated: Bool)
     {
         self.position = 0
         tableView.reloadData()
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return nameEvents.count
@@ -84,6 +86,8 @@ class BuyViewController: UIViewController , UITableViewDataSource, UITableViewDe
         destino.despegable = true
     }
     
+    /* Este metdo crifra un string */
+    
     func cifrado(mensaje: String, clave: UInt32) -> String {
         var mensajeCifrado = ""
         for letra in mensaje {
@@ -95,13 +99,19 @@ class BuyViewController: UIViewController , UITableViewDataSource, UITableViewDe
         return mensajeCifrado
     }
     
+    /* Es un metdo que pasa de letra a numero */
+    
     func letraANumero(letra: Character) -> UInt32 {
         return UnicodeScalar(String(letra))!.value
     }
     
+    /* Es un metdo que pasa de numero a letra */
+    
     func numeroALetra(numero: UInt32) -> Character {
         return Character(UnicodeScalar(numero)!)
     }
+    
+    /* Es un metodo que crea un fecha con tres int */
     
     func crearfecha(year:Int , month:Int , day:Int ) -> String
     {

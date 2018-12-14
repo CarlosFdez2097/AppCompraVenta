@@ -32,6 +32,7 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
         self.cargar()
         
     }
+    
     override func viewDidAppear(_ animated: Bool)
     {
         self.position = 0
@@ -77,6 +78,8 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
         
     }
     
+    /* Guarda los datos en UserDefault */
+    
     func guardar()
     {
         let EventsData = UserDefaults.standard
@@ -89,6 +92,9 @@ class OwnTicketsViewController: UIViewController , UITableViewDataSource, UITabl
         
         
     }
+    
+    /* Carga los datos en UserDefault */
+    
     func cargar()
     {
         let EventsData = UserDefaults.standard

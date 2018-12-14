@@ -43,6 +43,7 @@ class DetalleViewController: UIViewController
     }
     
     /* Lanza un alert com un mensaje predefinido */
+    
     func alert()
     {
         let alert = UIAlertController(title: "Compra Realizada", message:
@@ -55,6 +56,7 @@ class DetalleViewController: UIViewController
     }
     
     /* Genera un codigo QR con el string que se le pasa*/
+    
     func generateQRCode(from string: String) -> UIImage?
     {
         let data = string.data(using: String.Encoding.ascii)
